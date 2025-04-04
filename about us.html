@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/style3.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule defer></script>
+
+    <style>
+
+@media (max-width: 992px) {
+            header{
+                position: absolute;
+                right: 48%;
+            }
+
+            nav{
+                width: 450px;
+                height: 55px;
+                font-size: 19px;
+            }
+
+            nav a{
+                padding: 20px;
+            }
+
+            nav span{
+                width: 90px;
+                height: 100%;
+            }
+        }
+
+
+        body{
+            background-color: rgb(24, 0, 24);
+        }
+
+        #gray{
+            position: absolute;
+            background-color: rgb(82, 0, 82);
+            width: 99%;
+            border-radius: 3px;
+            color: white;
+            top: 8.5%;
+        }
+
+        @media (max-width: 992px) {
+            #gray{
+                position: absolute;
+                top: 12%;
+                height: 860px;
+            }
+        }
+
+        #img1{
+            position:absolute;
+            width: 10%;
+            height: 30%;
+            left: 70.5%;
+            z-index: 1;
+            transform: rotate(-15deg);
+            top: 15%;
+        }
+
+        #img2{
+            position: absolute;
+            width: 10%;
+            height: 30%;
+            left: 78%;
+            top: 15%;
+        }
+
+        #img3{
+            position: absolute;
+            width: 10%;
+            height: 30%;
+            left: 85.35%;
+            transform: rotate(15deg);
+            top: 15%;
+        }
+
+        @media (max-width: 992px) {
+            #img1, #img2, #img3{
+                display: none;
+            }
+        }
+
+        #para{
+            width: 67%;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: justify;
+            line-height: 0.8cm;
+           }
+
+           .black{
+            background-color: rgb(25, 0, 25);
+            border-radius: 3px;
+            margin: 5px;
+            padding: 5px;
+            width: 90%;
+           }
+
+           @media (max-width: 992px) {
+            .black{
+                position: relative;
+                left: 4%;
+                width: 890px;
+            }
+        }
+
+        
+        #arrow1{
+            position: absolute;
+            top: -38%;
+            scale: 20%;
+            left: 33%;
+            z-index: 2;
+        }
+
+        #arrow2{
+            position: absolute;
+            top: -38%;
+            scale: 20%;
+            left: 52%;
+            z-index: 2;
+            transform: rotate(20deg);
+        }
+
+        #arrow3{
+            position: absolute;
+            top:-38%;
+            scale: 20%;
+            left: 42.5%;
+        }
+
+        @media (max-width: 992px) {
+            #arrow1, #arrow2, #arrow3{
+                display: none;
+            }
+        }
+
+        .ptwo{
+            background-color: rgb(25, 0, 25);
+            border-radius: 3px;
+            margin: 5px;
+            padding: 5px;
+            width: 90%;
+        }
+
+        @media (max-width: 992px) {
+            .ptwo{
+                position: relative;
+                top: 60%;
+                width: 890px;
+                margin-left: 30px;
+            }
+        }
+
+        .pone{
+            padding-top:  30px;
+        }
+
+        #imgd{
+            position: absolute;
+            top: 95%;
+            width: 99%;
+        }
+
+        #imgd{
+
+            background-image: url(video-editing-cropped.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 99.5%;
+            z-index: -2;
+            opacity: 80%;
+        }
+
+        @media (max-width: 992px) {
+            #imgd{
+                position: absolute;
+                width: 99%;
+                top: 120%;
+                display: none;
+            }
+        }
+    
+      #img4{
+      opacity: 0;
+      }
+
+      .p2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 40px;
+            position: fixed;
+            top: 52.5%;
+            left: 7.5%;
+            z-index: -1;
+            color: black;
+            width: 75%;
+            text-align-last: center;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            text-shadow: 0 0 10px purple, 0 0 20px purple, 0 0 30px purple, 0 0 40px purple;
+            word-spacing: 5px;
+        }
+
+        @media (max-width: 992px) {
+            .p2{
+               display: none;
+            }
+        }
+      
+       .heading1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 50px;
+            position: absolute;
+            top: 63%;;
+            color: black;
+            text-shadow: 0 0 10px purple, 0 0 20px purple, 0 0 30px purple, 0 0 40px purple;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            position: fixed;
+            z-index: -1;
+       }
+
+       @media (max-width: 992px) {
+            .heading1{
+               display: none;
+            }
+        }
+
+       .dif{
+        color: rgb(171, 2, 171);
+        text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black;
+       }
+
+     .est{
+        color: rgb(171, 2, 171);
+        text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black;
+     }
+
+     .creative{
+        color: rgb(171, 2, 171);
+        text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black;
+     }
+
+     #gray2{
+            position: absolute;
+            background-color: rgb(34, 0, 34);
+            width: 99%;
+            border-radius: 3px;
+            color: white;
+            top: 167%;
+     }
+
+     @media (max-width: 992px) {
+            #gray2{
+                top: 135%;
+                width: 98%;
+            }
+        }
+
+     .gray21 {
+    position: relative;
+    width: 95%;
+    max-width: 99.5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: rgb(45, 0, 45);
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    right: -0.55%;
+    }
+
+    .gray22 {
+    position: relative;
+    width: 94.5%;
+    max-width: 99.5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: rgb(63, 1, 63);
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    right: -0.55%;
+    }
+
+    .gray23 {
+    position: relative;
+    width: 93%;
+    max-width: 99.5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: rgb(72, 1, 72);
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    right: -1.25%;
+    }
+
+    .gray24 {
+    position: relative;
+    width: 91%;
+    max-width: 99.5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: rgb(125, 1, 125);
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    right: -2%;
+    }
+
+    .gray25 {
+    position: relative;
+    width: 91%;
+    max-width: 99.5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: rgb(125, 1, 125);
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    right: -2%;
+    }
+
+    .gray26 {
+    position: relative;
+    width: 93%;
+    max-width: 99.5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: rgb(72, 1, 72);
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    right: -1.25%;
+    }
+
+    footer{
+    position: absolute;
+    width: 99%;
+    background:rgb(120, 1, 153);
+    min-height: 200px;
+    top: 106%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  @media (max-width: 992px) {
+            footer{
+                width: 100.5%;
+                top: 108%;
+            }
+        }
+    
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a id="home-link" href="home.html">Home</a>
+            <a id="portfolio-link" href="Portfolio1.html">Portfolio</a>
+            <a id="about-link" href="course.html">Courses</a>
+            <a id="contact-link" href="about us.html">About us</a>
+            <span></span>
+        </nav>
+</header>
+
+    <div id="gray">
+    <h1 class="animate-on-scroll">My Journey:</h1>
+    <div id="para">
+    <p class="black animate-on-scroll">As a person who started editing out of love for montages albeit with no experience on how to edit 
+        whatsoever, like other editors my journey also begin with softwares like Wondershare Filmora and 
+        Inshot and while my editing for the first two years was quite mediocre, my shift from editing montages
+        to editing informative videos was the transition that allowed me to explore various editing methods
+        and ways to improve my editing in every possible aspect, including the use color correction, the use of
+        SFX's, animation, Graphics, effects, transitions and much more.
+    <p class="black animate-on-scroll">
+        Currently I stand at a point where I can call myself an expert editor but it doesn't mean that I am
+        the best, the jourey for becoming a top of the line editor is tough, something that requires endless
+        dedication and motivation, and while I was unable to put in that much which was required to be a renowned 
+        editor, it does not mean its impossible, just some efforts can make endless imaginations come true.
+    </p>
+    </p>
+
+    <h1 class="pone">Purpose of this website</h1>
+    <p class="ptwo animate-on-scroll">
+        The reason why I created this website is to be able to show my work to others while ensuring that
+        others are able to learn something out of it, the rationale as to why I created a course section on
+        this website. The main intent behind all of this is to be able to give something away to the users, a
+        skill that would help the users to experience something new.
+    </p>
+
+    <p class="ptwo animate-on-scroll">
+        These courses might not be of much value for someone who is already an expert or someone who has
+        been editing for quitesome time, but for those who are just beginners or even those who are on an
+        intermetidate level, those users might be able to find something of great insight out of these courses, techniques
+        and strategies that may be able to help make their editing faster and much more engaging.
+    </p>
+</div>
+        <img src="Images/inshot.jpg" alt="" id="img1">
+        <img src="Images/CapCut.jpeg" alt="" id="img2">
+        <img src="Images/filmora.jpeg" alt="" id="img3">
+        <img src="Images/arrow 1.png" alt="" id="arrow1">
+        <img src="Images/arrow 1.png" alt="" id="arrow2">
+        <img src="Images/arrow 2.png" alt="" id="arrow3">
+    </div>
+<div id="imgd">
+    <img src="video-editing-cropped.jpg" alt="" id="img4">
+    <p class="p2"><b>"<span class="creative">Creativity</span> involves breaking out of <span class="est">established patterns</span> in order to look at things in a <span class="dif">different way</span>."</b></p>
+    <h2 class="heading1">~Edward de Bono~</h2>
+</div>
+
+<div id="gray2">
+    <div class="gray21 animate-on-scroll">
+    <h1>Suggested Content:</h1>
+    <div class="gray22 animate-on-scroll">
+    <h2>YouTube Channels: (For Editing) </h2>
+    <div class="gray23 animate-on-scroll">
+    <h3>Beginner:</h3>
+    <div class="gray24 animate-on-scroll">
+        <h4>1- Ben Claremont (for CapCut - Beginner) </h4>
+        <h4>2- Creative Suite Tutorials (for CapCut - Beginner)</h4>    
+        <h4>3- Tube Sensei (for CapCut - Beginner)</h4>
+        <h4>4- Shadab Alam (for CapCut - Beginner)</h4>
+   </div>
+   <h3>Intermediate:</h3>
+   <div class="gray25 animate-on-scroll">
+        <h4>1- Imran Ali Dina (for Adobe - Intermediate)</h4>    
+        <h4>2- Toms Project (for Adobe - Intermediate)</h4>
+        <h4>3- HBA Services (for Adobe - Intermediate)</h4>
+        <h4>4- BRING YOUR OWN LAPTOP (for Adobe - Intermediate)</h4>
+   </div>
+   </div>
+   <h2>Online Courses:</h2>
+   <div class="gray26 animate-on-scroll">
+    <h4> 1- Artlist Academy -- Link: https://artlist.io/academy/courses/editing-101-the-ultimate-beginners-guide-to-video-editing/?playlist=5e52790&video=fdf70ca</h4>
+    <h4> 2- snscreen.com -- Link: https://www.unscreen.com/b/beginner-guide-to-video-editing </h4>
+    <h4> 3- Coursea.org -- Link: https://www.coursera.org/courses?query=video%20editing</h4>
+    <h4> 4- udemy.com -- Link: https://www.udemy.com/topic/video-editing/ (Only if you have spare money)</h4>
+   </div>
+</div>
+</div>
+
+<footer class="animate-on-scroll">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social_icons">
+        <li><a href="https://www.youtube.com/@ThatGuyEditzz562" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/scalemedia_official/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/muhammad-hadi-110186310/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    </ul>
+
+    <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Portfolio1.html">Portfolio</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="about us.html">About us</a></li>
+    </ul>
+    <p>©2024 Muhammad Hadi's Portfolio Website | All Rights Reserved</p>
+   </footer>
+
+   <script src="hometest.js"></script>
+   <script>
+    // Prevent zooming with keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '_' || e.key === '0')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Prevent zooming with mouse wheel
+    document.addEventListener('wheel', function(e) {
+      if (e.ctrlKey) {
+        e.preventDefault();
+        return false;
+      }
+    }, { passive: false });
+    
+    // Prevent zooming with pinch gestures
+    document.addEventListener('touchmove', function(e) {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+    
+    // Reset zoom to 1 if somehow user manages to zoom
+    window.addEventListener('resize', function() {
+      if (document.body.clientWidth !== window.innerWidth) {
+        // User may have zoomed
+        document.body.style.zoom = 1;
+      }
+    });
+  </script>
+</body>
+</html>

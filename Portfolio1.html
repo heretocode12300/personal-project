@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/video.css">
+    <link rel="stylesheet" href="Css/style3.css">
+
+    <style>
+
+@media (max-width: 992px) {
+            header{
+                position: absolute;
+                right: 48%;
+            }
+
+            nav{
+                width: 450px;
+                height: 55px;
+                font-size: 19px;
+            }
+
+            nav a{
+                padding: 20px;
+            }
+
+            nav span{
+                width: 90px;
+                height: 100%;
+            }
+        }
+
+
+        .magic{
+            position: fixed;
+            width: 99%;
+            opacity: 70%;
+            height: 100%;
+        }
+
+        @media (max-width: 992px){
+            .magic{
+                width: 98.5%;
+                border-radius: 5px;
+            }
+        }
+
+
+        body{
+            background: linear-gradient(60deg, black,rgb(43, 0, 43));
+            width: 100%;
+        }
+
+        .yes{
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            width: 50%;
+            font-size: 100px;
+            color: transparent;
+            text-align: center;
+            background-image: linear-gradient(-270deg, rgb(76, 1, 76), rgb(151, 1, 151));
+            -webkit-background-clip: text;
+        }
+
+        @media (max-width: 992px){
+            .yes{
+               font-size: 87px;
+               top: 35%;
+            }
+        }
+
+
+        
+
+        .back{
+            background-color: black;
+            position: absolute;
+            top: 100.5%;
+            width: 99%;
+            height: 180%;
+        }
+
+        .back1{
+            background-color: rgb(154, 2, 154);
+            position: absolute;
+            width: 98.5%;
+            top: 102%;
+            height: 88%;
+            border-radius: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:30px;
+            color: rgb(37, 0, 37);
+        }
+        
+        .gray{
+            background-color: rgb(116, 2, 116);
+            position: absolute;
+            width: 98.5%;
+            height: 88%;
+            top: 191%;
+            border-radius: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:30px;
+            color: rgb(42, 1, 42);
+        }
+
+        @media (max-width: 992px){
+            .gray{
+               height: 75%;
+            }
+        }
+
+
+        .vid1{
+            height: 75%;
+            width: 30%;
+            margin-left: 10px;
+        }
+
+        .vid2{
+            height: 75%;
+            width: 30%;
+            position: absolute;
+            left: 35%;
+        }
+
+        .vid3{
+            height: 75%;
+            width: 30%;
+            position: absolute;
+            left: 69.5%;
+        }
+
+        .vid21{
+            width: 49%;
+            position: absolute;
+            margin-left: 5px;
+        }
+
+        .vid22{
+            width: 49%;
+            position: absolute;
+            left: 50.65%;
+        }
+
+        .white2{
+            background-color: rgb(74, 0, 74);
+            position: absolute;
+            width: 98.5%;
+            top: 280%;
+            height: 130%;
+            border-radius: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:30px;
+            color: rgb(116, 2, 116);
+        }
+
+        @media (max-width: 992px){
+            .white2{
+                top: 267%;
+                height: 115%;
+            }
+        }
+
+
+        .whit{
+            background-color: rgb(53, 0, 53);
+            position: absolute;
+            width: 98.5%;
+            top: 411%;
+            height: 190%;
+            border-radius: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:30px;
+            color: rgb(154, 2, 154);
+        }
+
+        @media (max-width: 992px){
+            .whit{
+                top: 383%;
+                height: 170%;
+            }
+        }
+
+
+        .forward{
+            top: 610%;
+            position: absolute;
+            background: linear-gradient(15deg, black,purple);
+            border-radius: 40px;
+            width: 190px;
+            font-size: 20px;
+            height: 50px;
+            right: 2%;
+            color: purple;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 992px){
+            .forward{
+                top: 565%;
+            }
+        }
+
+
+        .forward:hover{
+            transform: -3px;
+            transition: 0.5s ease;
+            color: rgb(158, 4, 158);
+            text-decoration: underline;
+            font-weight: 500;
+            box-shadow: 11px 1px 20px rgb(234, 3, 234);
+        }
+
+        .backward{
+            top: 610%;
+            background: linear-gradient(15deg, black,purple);
+            border-radius: 40px;
+            width: 190px;
+            font-size: 20px;
+            height: 50px;
+            left: 2%;
+            color: purple;
+            margin-bottom: 20px;
+        }
+
+        .backward:hover{
+            transform: -3px;
+            transition: 0.5s ease;
+            color: rgb(158, 4, 158);
+            text-decoration: underline;
+            font-weight: 500;
+            box-shadow: 11px 1px 20px rgb(234, 3, 234);
+        }
+
+        @media (max-width: 992px){
+            .backward{
+                top: 565%;
+            }
+        }
+
+        footer{
+    position: absolute;
+    width: 99%;
+    background:rgb(120, 1, 153);
+    min-height: 200px;
+    top: 640%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  @media (max-width: 992px){
+            footer{
+                top: 592%;
+            }
+        }
+
+  body{
+    height: 180%;
+  }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a id="home-link" href="home.html">Home</a>
+            <a id="portfolio-link" href="Portfolio1.html">Portfolio</a>
+            <a id="about-link" href="course.html">Courses</a>
+            <a id="contact-link" href="about us.html">About us</a>
+            <span></span>
+            <script src="nav.js"></script>
+        </nav>
+</header>
+
+    <img src="Images/magic.jpg" alt="" class="magic">
+    <h1 class="yes">The MAGIC Lies Here!</h1>
+
+    <div class="back">
+        .
+    </div>
+
+    <div class="back1 animate-on-scroll">
+      <h1>Houston Kold Style Shorts:</h1>
+      <video controls src="videos/sample houston 1.1..mp4" class="vid1"></video>
+      <video controls poster="Images/Untitled design.png" src="videos/Houston style edit 2.mp4" class="vid2"></video>
+      <video controls src="videos/Outclass.mp4" class="vid3"></video>
+    </div>
+
+    <div class="gray animate-on-scroll">
+        <h1>Wojak style animation:</h1>
+        <div class="carousel-container animate-on-scroll">
+            <div class="carousel animate-on-scroll">
+                <div class="video-item">
+                    <video src="videos/Wojak..mp4" controls class="vidv"></video>
+                </div>
+                <div class="video-item">
+                    <video src="videos/Pro 2.2.mp4" controls class="vidv"></video>
+                </div>
+                <div class="video-item">
+                    <video src="videos/kia vid actual final.mp4" controls class="vidv"></video>
+                </div>
+                <!-- Add more video items as needed -->
+            </div>
+            <button class="prev animate-on-scroll" onclick="moveCarousel(-1)">&#10094;</button> <!--(&#10094)displays the left arrow-->
+            <button class="next animate-on-scroll" onclick="moveCarousel(1)">&#10095;</button> <!--(&#10095)displays the right arrow-->
+        </div>
+    
+        <script src="script.js"></script>
+    </div>
+
+    <div class="white2 animate-on-scroll">
+        <h1>Anime based Videos:</h1>
+        <div class="carousel-container1 animate-on-scroll">
+            <div class="carousel1 animate-on-scroll">
+                <div class="video-item1">
+                    <video src="videos/anime1.mp4" class="vidv1" controls></video>
+                </div>
+                <div class="video-item1">
+                    <video src="videos/Anime 2.mp4 " class="vidv1" controls></video>
+                </div>
+                <div class="video-item1">
+                    <video src="videos/Anime 3.mp4" class="vidv1" controls></video>
+                </div>
+                <div class="video-item1">
+                    <video src="videos/anime4.mp4" class="vidv1" controls></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="whit animate-on-scroll">
+        <h1>Samples:</h1>
+        <div class="carousel-container2 animate-on-scroll">
+            <div class="carousel2 animate-on-scroll">
+                <div class="video-item2">
+                    <video src="videos/Sample.mp4" class="vidv2" controls></video>
+                </div>
+                <div class="video-item2">
+                    <video src="videos/Sample2.1.mp4" class="vidv2" controls></video>
+                </div>
+                <div class="video-item2">
+                    <video src="videos/Sample3.mp4" class="vidv2" controls></video>
+                </div>
+                <div class="video-item2">
+                    <video src="videos/Sample4.mp4" class="vidv2" controls></video>
+                </div>
+                <div class="video-item2">
+                    <video src="videos/Sample5.mp4" class="vidv2" controls></video>
+                </div>
+                </div>
+            <button class="prev1" onclick="moveCarousel2(-1)">&#10094;</button> <!--(&#10094)displays the left arrow-->
+            <button class="next1" onclick="moveCarousel2(1)">&#10095;</button> <!--(&#10095)displays the right arrow-->
+        </div>
+
+        <div class="carousel-container3 animate-on-scroll">
+            <div class="carousel3 animate-on-scroll">
+                <div class="video-item3">
+                    <video src="videos/kaiju no.8..mp4" class="vidv3" controls></video>
+                </div>
+                <div class="video-item3">
+                    <video src="videos/Sample edit.mp4" class="vidv3" controls></video>
+                </div>
+                <div class="video-item3">
+                    <video src="videos/Sample6.mp4" class="vidv3" controls></video>
+                </div>
+                <div class="video-item3">
+                    <video src="videos/Sample7.mp4" class="vidv3" controls></video>
+                </div>
+                <div class="video-item3">
+                    <video src="videos/Sample8.mp4" class="vidv3" controls></video>
+                </div>
+            </div>
+            <button class="prev2 animate-on-scroll" onclick="moveCarousel3(-1)">&#10094;</button>
+            <button class="next2 animate-on-scroll" onclick="moveCarousel3(1)">&#10095;</button>
+        </div>
+        <script src="script.js"></script>
+</div>
+
+
+<a href="course.html"><button type="button" class="forward animate-on-scroll">Next Page →</button></a>
+<a href="home.html"><button type="button" class="backward animate-on-scroll">← Previous Page</button></a>
+
+
+<footer class="animate-on-scroll">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social_icons">
+        <li><a href="https://www.youtube.com/@ThatGuyEditzz562" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/scalemedia_official/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/muhammad-hadi-110186310/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    </ul>
+
+    <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Portfolio1.html">Portfolio</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="about us.html">About us</a></li>
+    </ul>
+    <p>©2024 Muhammad Hadi's Portfolio Website | All Rights Reserved</p>
+   </footer>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   <script src="hometest.js"></script>
+   <script>
+    // Prevent zooming with keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '_' || e.key === '0')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Prevent zooming with mouse wheel
+    document.addEventListener('wheel', function(e) {
+      if (e.ctrlKey) {
+        e.preventDefault();
+        return false;
+      }
+    }, { passive: false });
+    
+    // Prevent zooming with pinch gestures
+    document.addEventListener('touchmove', function(e) {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+    
+    // Reset zoom to 1 if somehow user manages to zoom
+    window.addEventListener('resize', function() {
+      if (document.body.clientWidth !== window.innerWidth) {
+        // User may have zoomed
+        document.body.style.zoom = 1;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/style3.css">
+
+    <style>
+          .forward{
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(15deg, black,purple);
+            border-radius: 40px;
+            width: 190px;
+            font-size: 20px;
+            height: 50px;
+            color: purple;
+            z-index: 100;
+        }
+
+        .forward:hover{
+            transform: translateY(-3px);
+            transition: 0.5s ease;
+            color: rgb(158, 4, 158);
+            text-decoration: underline;
+            font-weight: 500;
+            box-shadow: 11px 1px 20px rgb(234, 3, 234);
+        }
+
+        .backward{
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: linear-gradient(15deg, black,purple);
+            border-radius: 40px;
+            width: 190px;
+            font-size: 20px;
+            height: 50px;
+            color: purple;
+            z-index: 100;
+        }
+
+        .backward:hover{
+            transform: translateY(-3px);
+            transition: 0.5s ease;
+            color: rgb(158, 4, 158);
+            text-decoration: underline;
+            font-weight: 500;
+            box-shadow: 11px 1px 20px rgb(234, 3, 234);
+        }
+
+        @media (max-width: 992px) {
+            header{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            nav{
+                margin: 10px auto;
+                width: 450px;
+                height: 55px;
+                font-size: 19px;
+            }
+
+            nav a{
+                padding: 20px;
+            }
+
+            nav span{
+                width: 90px;
+                height: 100%;
+            }
+        }
+
+        /* Added responsive styles for buttons */
+        @media (max-width: 768px) {
+            .forward, .backward {
+                width: 150px;
+                font-size: 16px;
+                height: 45px;
+            }
+            
+            header{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            nav{
+                margin: 10px auto;
+                width: 90%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .forward, .backward {
+                width: 120px;
+                font-size: 14px;
+                height: 40px;
+            }
+            
+            header{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            nav{
+                margin: 10px auto;
+                width: 95%;
+                max-width: 320px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html">Home</a></li>
+            <a href="Portfolio1.html">Portfolio</a></li>
+            <a href="course.html">Courses</a></li>
+            <a href="about us.html">About us</a></li>
+             <span></span>
+     </nav>
+    </header>
+
+    <section class="wraper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="title">
+            <div id="course">
+                <a href="innercourse.html"><span id="span">Beginner's Course</span></a>
+            </div>
+            <div id="course1">
+                <span id="spann">Intermediate Course</span>
+            </div>
+            <div id="course2">
+                <span id="spannn">Expert Course</span>
+            </div>
+        </div>
+    </section>
+
+    <a href="about us.html"><button type="button" class="forward">Next Page →</button></a>
+    <a href="Portfolio1.html"><button type="button" class="backward">← Previous Page</button></a>
+
+    <script>
+    // Prevent zooming with keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '_' || e.key === '0')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Prevent zooming with mouse wheel
+    document.addEventListener('wheel', function(e) {
+      if (e.ctrlKey) {
+        e.preventDefault();
+        return false;
+      }
+    }, { passive: false });
+    
+    // Prevent zooming with pinch gestures
+    document.addEventListener('touchmove', function(e) {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+    
+    // Reset zoom to 1 if somehow user manages to zoom
+    window.addEventListener('resize', function() {
+      if (document.body.clientWidth !== window.innerWidth) {
+        // User may have zoomed
+        document.body.style.zoom = 1;
+      }
+    });
+  </script>
+</body>
+</html>
