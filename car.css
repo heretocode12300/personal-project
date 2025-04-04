@@ -1,0 +1,335 @@
+.banner {
+    width: 100%;
+    height: 98vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) perspective(1000px);
+    transform-style: preserve-3d;
+    animation: autorun 20s linear infinite;
+    z-index: 2;
+}
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+    .banner .slider {
+        width: 150px;
+        height: 200px;
+        left: calc(55% - 75px);
+        transform: perspective(1000px);
+    }
+}
+
+@keyframes autorun {
+    0% {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+               translateZ(550px);
+    animation: fadein 3s linear forwards;
+    opacity: 0;
+}
+
+@media (max-width: 992px) {
+    .banner .slider .item {
+        width: 100px;
+        height: 150px;
+        transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+                   translateZ(390px);
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .content .model {
+    width: 75%;
+    height: 75vh;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 8%;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+    animation: fadeup 5s linear forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+@media (max-width: 992px) {
+    .banner .content .model {
+        position: absolute;
+        top: 30%;
+        bottom: 0;
+        left: -15%;
+        z-index: 1;
+        animation: fadeup 5s linear forwards;
+        opacity: 0;
+        animation-delay: 2s;
+    }
+}
+
+@keyframes fadeup {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.wrapper span {
+    position: fixed;
+    bottom: -180px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    background-color: black;
+    box-shadow: 0 0 50px rgb(130, 0, 102),
+                0 0 100px rgb(130, 0, 102),
+                0 0 150px rgb(130, 0, 102),
+                0 0 200px rgb(130, 0, 102);
+    animation: animate 10s linear infinite;
+}
+
+.wrapper span:nth-child(1) {
+    left: 60px;
+    animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2) {
+    left: 10%;
+    animation-delay: 3s;
+    width: 60px;
+    height: 60px;
+}
+
+.wrapper span:nth-child(3) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4) {
+    left: 30%;
+    animation-delay: 5s;
+    width: 80px;
+    height: 80px;
+}
+
+.wrapper span:nth-child(5) {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.wrapper span:nth-child(6) {
+    left: 50%;
+    animation-delay: 7s;
+}
+
+.wrapper span:nth-child(7) {
+    left: 60%;
+    animation-delay: 6s;
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper span:nth-child(8) {
+    left: 70%;
+    animation-delay: 8s;
+}
+
+.wrapper span:nth-child(9) {
+    left: 80%;
+    animation-delay: 6s;
+    width: 90px;
+    height: 90px;
+}
+
+.wrapper span:nth-child(10) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes animate {
+    0% { transform: translateY(0); opacity: 1; }
+    80% { opacity: .7; }
+    100% { transform: translateY(-800px) rotate(360deg); opacity: 0; }
+}
+
+.intro {
+    background-color: #181818;
+    width: 17%;
+    height: 23%;
+    position: absolute;
+    top: 33%;
+    padding: 5px;
+    left: 38.5%;
+    animation: topp 5s linear forwards;
+    animation-delay: 4s;
+    opacity: 0;
+    z-index: 2;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .intro {
+        top: 32%;
+        height: 23%;
+        width: 27%;
+    }
+}
+
+.intro::before {
+    content: "";
+    background-image: conic-gradient(rgb(59, 1, 59) 20deg, transparent 120deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.intro::after {
+    content: "";
+    width: 95%;
+    height: 90%;
+    background-color: #101010;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: inset 20px 20px #0000008c;
+}
+
+@keyframes topp {
+    0% {
+        transform: translateY(33%);
+        opacity: 0;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-120%);
+        opacity: 1;
+    }
+}
+
+.btnn {
+    height: 20%;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .btnn {
+        height: 20%;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.btnn h1 {
+    margin: 5px;
+}
+
+.text {
+    position: absolute;
+    top: 8%;
+    left: 40.5%;
+    z-index: 3;
+    color: purple;
+    font-size: 20px;
+    line-height: 4px;
+    text-align: center;
+    animation: topp1 5s linear forwards;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+@media (max-width: 992px) {
+    .text {
+        top: 5%;
+    }
+}
+
+@keyframes topp1 {
+    0% {
+        transform: translateY(33%);
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* ***************** MOBILE ADJUSTMENTS (max-width: 480px) ***************** */
+@media (max-width: 480px) {
+    .banner .slider {
+        width: 120px;
+        height: 150px;
+    }
+
+    .banner .slider .item {
+        position: absolute;
+        top: 35%;
+        width: 80px;
+        height: 120px;
+        transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+                   translateZ(300px);
+    }
+
+   .banner .content .model {
+       transform: scale(0.6);
+        top: 23%;
+        left: -46%;
+        
+    }
+
+    .intro {
+        width:53%;
+        top: 32%;
+        left: 25%;
+    }
+
+    .text {
+        font-size: 16px;
+        left: 27.75%;
+        top: 8%;
+    }
+}
